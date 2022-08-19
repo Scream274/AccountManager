@@ -1,8 +1,7 @@
 package org.itstep.accountmanager.readers;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.itstep.accountmanager.account.Account;
+import org.itstep.accountmanager.account.AccountConverter;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,11 +15,10 @@ public class JsonReader implements Reader {
 
     @Override
     public List<Account> readFromFile() throws IOException {
-        Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy(HH:mm:ss)").create();
         List<Account> accounts = new ArrayList<>();
         var accountStr = Files.readAllLines(Path.of(FILE_JSON));
         for (String str : accountStr) {
-            accounts.add(gson.fromJson(str, Account.class));
+            accounts.add(AccountConverter.jsonToAccount(str));
         }
         return accounts;
     }

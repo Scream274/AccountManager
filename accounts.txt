@@ -1,2 +1,0 @@
-MyLogin mymail@gmail.com password1111 32 Some_interesting_description 19-08-2022(20:02:59) 1990-08-19
-TestLogin test@gmail.com testPassword 16 no_description 19-08-2022(20:02:59) 2006-09-27

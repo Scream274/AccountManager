@@ -1,6 +1,5 @@
 package org.itstep.accountmanager.writers;
 
-import com.thoughtworks.xstream.XStream;
 import org.itstep.accountmanager.account.Account;
 import org.itstep.accountmanager.account.AccountConverter;
 

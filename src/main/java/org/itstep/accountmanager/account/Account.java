@@ -19,6 +19,7 @@ public class Account {
     public String getLogin() {
         return login;
     }
+
     public void setLogin(String login) {
         this.login = login;
     }
@@ -26,6 +27,7 @@ public class Account {
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -33,6 +35,7 @@ public class Account {
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -40,6 +43,7 @@ public class Account {
     public LocalDateTime getRegisterDate() {
         return registerDate;
     }
+
     public void setRegisterDate(LocalDateTime registerDate) {
         this.registerDate = registerDate;
     }
@@ -47,6 +51,7 @@ public class Account {
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
         birthDate = LocalDate.now().minusYears(age);
@@ -55,6 +60,7 @@ public class Account {
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -62,6 +68,7 @@ public class Account {
     public LocalDate getBirthDate() {
         return birthDate;
     }
+
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
         age = LocalDate.now().getYear() - birthDate.getYear();

@@ -1,6 +1,5 @@
 package org.itstep.accountmanager.writers;
 
-import com.google.gson.*;
 import org.itstep.accountmanager.account.Account;
 import org.itstep.accountmanager.account.AccountConverter;
 
