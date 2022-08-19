@@ -1,6 +1,7 @@
 package org.itstep.accountmanager.writers;
 
 import org.itstep.accountmanager.account.Account;
+import org.itstep.accountmanager.account.AccountConverter;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class TextWriter implements Writer {
     @Override
     public void saveToFile(Account account) throws IOException {
         try (FileWriter writer = new FileWriter(FILE_TXT, true)) {
-            writer.write(account.getPreparedString() + System.lineSeparator());
+            writer.write(AccountConverter.accountToString(account) + System.lineSeparator());
         }
     }
 }

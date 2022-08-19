@@ -67,12 +67,6 @@ public class Account {
         age = LocalDate.now().getYear() - birthDate.getYear();
     }
 
-    public String getPreparedString(){
-        return login + ' ' + email + ' ' + password +
-                ' ' + age + ' ' + description.replace(" ", "_")
-                + ' ' + registerDate.format(FORMATTER) + ' ' + birthDate;
-    }
-
     @Override
     public String toString() {
 
